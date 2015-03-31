@@ -14,11 +14,16 @@
     .success{
       color: #33cc00;
     }
+    .style-ok{
+      display: none;
+    }
   </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div><img src="img/logo.png" alt="VagrantEasy Logo" /></div>
 	<h1>VagrantEasy Example LAMP App</h1>
+  <h3>Testing LAMP</h3>
   <ul>
     <li>
     	<strong>Linux</strong>
@@ -79,5 +84,21 @@
   		</ul>
   	</li>
   </ul>
+  <h3>Testing Client Access</h3>
+  <ul>
+  	<li>
+  		<strong>CSS</strong>
+  		<ul>
+  			<li>Loading.......... <span class="success style-ok">OK</span><span class="error style-fail">FAIL</span></li>
+  		</ul>
+  	</li>
+  	<li>
+  		<strong>JavaScript</strong>
+  		<ul>
+  			<li>Loading.......... <span id="scriptSpan" class="error">FAIL</span></li>
+  		</ul>
+  	</li>
+  </ul>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
