@@ -17,14 +17,33 @@
   </style>
 </head>
 <body>
-	<h1>VagrantEasy Example App</h1>
+  <div><img src="img/logo.png" alt="VagrantEasy Logo" /></div>
+	<h1>VagrantEasy Example LAMP App</h1>
   <ul>
-  	<li>
-  		<strong>PHP</strong>
-  		<ul>
-  			<li>Version.......... <?php echo '<span class="success">' . phpversion() . '</span>'; ?></li>
-  		</ul>
-  	</li>
+    <li>
+    	<strong>Linux</strong>
+    	<ul>
+    		<li>Version.......... <?php 
+        try {
+          echo '<span class="success">' . php_uname() . '</span>';
+        } catch(Exception $e) {
+          echo '<span class="error">FAIL: ' . $e->getMessage() . '</span>';
+        }
+        ?></li>
+    	</ul>
+    </li>
+    <li>
+    	<strong>Apache</strong>
+    	<ul>
+    		<li>Version.......... <?php 
+        try {
+          echo '<span class="success">' . apache_get_version() . '</span>';
+        } catch(Exception $e) {
+          echo '<span class="error">FAIL: ' . $e->getMessage() . '</span>';
+        }
+        ?></li>
+    	</ul>
+    </li>
   	<li>
   		<strong>MySQL</strong>
   		<ul>
@@ -51,6 +70,12 @@
             echo '<span class="error">FAIL: ' . $e->getMessage() . '</span>';
           }
         ?></li>
+  		</ul>
+  	</li>
+  	<li>
+  		<strong>PHP</strong>
+  		<ul>
+  			<li>Version.......... <?php echo '<span class="success">' . phpversion() . '</span>'; ?></li>
   		</ul>
   	</li>
   </ul>
